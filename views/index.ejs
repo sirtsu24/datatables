@@ -21,6 +21,33 @@
         
         <div class="table-container">
             <table id="example" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Office</th>
+                        <th>Age</th>
+                        <th>Start date</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (let data of dataSet) { %>
+                        <tr>
+                            <td><%= data.name %></td>
+                            <td><%= data.position %></td>
+                            <td><%= data.office %></td>
+                            <td><%= data.age %></td>
+                            <td><%= data.startDate %></td>
+                            <td><%= data.salary %></td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+
+            <!-- below this was total BS, sorry ;) -->
+            <!--
+            <table id="example" class="display" style="width:100%">
                 <% for (let data of dataSet) { %>
                 <thead>
                     <tr>
@@ -41,7 +68,7 @@
                 </thead>
                 <% } %>
             </table>
-            
+        -->
         </div>
         
         </div>

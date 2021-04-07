@@ -11,8 +11,7 @@ exports.getAddData = (req, res) =>{
 exports.getData = (req, res) => {
     Data.fetchAll()
     .then(dataSet => {
-        res.render('index.ejs',
-            {
+        res.render('index.ejs', {
                 dataSet: dataSet,
                 pageTitle: 'Data',
                 path: '/'

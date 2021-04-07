@@ -6,12 +6,12 @@ const dataRouter = require('./routes/dataRoutes');
 const app = express();
 
 
-app.set('view engine', 'ejs');
+app.set('view engine', ejs);
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('public'));
 
-app.use('/', dataRouter);
-app.use('/newform', dataRouter);
+app.use(dataRouter);
+//app.use('/newform', dataRouter);
 
 
 /*app.listen(3000, () =>{
