@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title-container">
+            <h1>Add data to mongodb database</h1>
+        </div>
+        <div>
+            <br>
+            <button onclick="document.location='/data'">Add data</button>
+            <br>
+            <br>
+        </div>
+        
+        <div class="table-container">
+            <table id="example" class="display" style="width:100%">
+                <% for (let data of dataSet) { %>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <%= data.name %>
+                        <th>Position</th>
+                        <%= data.position %>
+                        <th>Office</th>
+                        <%= data.office %>
+                        <th>Age</th>
+                        <%= data.age %>
+                        <th>Start date</th>
+                        <%= data.start %>
+                        <th>Salary</th>
+                        <%= data.salary %>
+                        <input type="hidden" value="<%= data.id %>" name="dataId">
+                    </tr>
+                </thead>
+                <% } %>
+            </table>
+            
+        </div>
+        
+        </div>
+          
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="app/main.js"></script>
+</body>
+</html>
